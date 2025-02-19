@@ -1,0 +1,23 @@
+{% macro dislike_btn(pressed, for) %}
+{% if pressed %}
+    <a class="dislike-btn-pressed" href="#">
+        {{ for['dislike_count'] }} <span></span>
+    </a>
+{% else %}
+    <a class="dislike-btn" href="#">
+        {{ for['dislike_count'] }} <span></span>
+    </a>
+{% endif %}
+{% endmacro %}
+
+{% macro dislike_comment_btn(pressed, for) %}
+{% if pressed %}
+    <a class="dislike-btn-pressed" href="#">
+        {{ for['dislike_count'] }} <span></span>
+    </a>
+{% else %}
+    <a class="dislike-btn" href="#">
+        {{ for['dislike_count'] }} <span></span>
+    </a>
+{% endif %}
+{% endmacro %}

@@ -1,0 +1,23 @@
+{% macro like_btn(pressed, for) %}
+{% if pressed %}
+    <a class="like-btn-pressed" href="#">
+        {{ for['like_count'] }} <span></span>
+    </a>
+{% else %}
+    <a class="like-btn" href="#">
+        {{ for['like_count'] }} <span></span>
+    </a>
+{% endif %}
+{% endmacro %}
+
+{% macro like_comment_btn(pressed, for) %}
+{% if pressed %}
+    <a class="like-btn-pressed" href="#">
+        {{ for['like_count'] }} <span></span>
+    </a>
+{% else %}
+    <a class="like-btn" href="#">
+        {{ for['like_count'] }} <span></span>
+    </a>
+{% endif %}
+{% endmacro %}

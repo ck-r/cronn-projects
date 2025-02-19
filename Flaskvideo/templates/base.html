@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <div class="header__container">
+        <h1><a href="{{ url_for('index') }}">LOGO</a></h1>
+            <nav class="horizontal-nav">
+{#                {% if user %}#}
+{#                    <p>{{ user.name }}</p>#}
+{#                    <a class="button-link" href="#">Your account</a>#}
+{#                    <a class="button-link" href="#">Liked videos</a>#}
+{#                {% else %}#}
+{#                    <a class="button-link" href="#">Log in</a>#}
+{#                    <a class="button-link" href="#">Register</a>#}
+{#                {% endif %}#}
+                <a class="button-link" href="{{ url_for('upload') }}">Upload</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>

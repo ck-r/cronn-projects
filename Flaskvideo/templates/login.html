@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+</head>
+<body>
+    <div class="form-container">
+        <ul class="warnings">
+            {% for warning in warnings %}
+                <li>warning</li>
+            {% endfor %}
+        </ul>
+        <form method="post">
+            <p class="form-field">
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username">
+            </p>
+            <p class="form-field">
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username">
+            </p>
+        </form>
+    </div>
+</body>
+</html>

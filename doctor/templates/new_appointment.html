@@ -1,0 +1,12 @@
+{% extends 'base_form.html' %}
+
+{% block title %}Nowe spotkanie{% endblock %}
+
+{% block content %}
+    <h1>Nowe spotkanie</h1>
+    <form method="post">
+        {{ form }}
+        <button type="submit">Book appointment</button>
+        {% csrf_token %}
+    </form>
+{% endblock %}

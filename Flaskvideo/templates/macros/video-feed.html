@@ -1,0 +1,20 @@
+{% from 'macros/channel-link.html' import channel_link_small %}
+
+{% macro video_feed(feed) %}
+    <div class="video-feed__container">
+        {% for video in feed %}
+            <div class="video-preview">
+                <a href="{{ url_for('videos', oid=video['_id']|string()) }}">
+                    <img src="{{ url_for('static', filename=video['thumbnail']) }}" alt="" class="video-thumbnail">
+                </a>
+                <h4>{{ video['title'] }}</h4>
+                <div class="video-preview-details">
+                    {{ channel_link_small(video['uploader']) }}
+                    <p>Views: {{ video['view_count'] }}</p>
+                    <p>Likes: {{ video['like_count'] }}</p>
+                    <p>Dislikes: {{ video['dislike_count'] }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}

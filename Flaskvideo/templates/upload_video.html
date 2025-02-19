@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title">
+        <label for="desc">Description</label>
+        <input type="text" name="desc" id="desc">
+        <label for="thumb">Thumbnail</label>
+        <input type="file" name="thumb" id="thumb">
+        <label for="video">Video</label>
+        <input type="file" name="video" id="video">
+        <button type="submit">Upload</button>
+    </form>
+    {% block content %}{% endblock %}
+</body>
+</html>

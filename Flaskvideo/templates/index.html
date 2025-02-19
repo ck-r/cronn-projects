@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% from 'macros/video-feed.html' import video_feed %}
+
+{% block title %}Vibeo{% endblock %}
+
+{% block content %}
+<main>
+    <div class="main__container">
+        <h1>Hello {{ user['username'] }}</h1>
+        {{ video_feed(feed) }}
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Good doctor {% endblock %}
+
+{% block content %}
+    <h1>Good Doctor</h1>
+    <p>Masz {{ alen }} umówione wizyty</p>
+    <ol>
+        {% for appointment in appointments %}
+            <li><a href="{% url 'appointment' appointment.id %}">{{ appointment.date }}: {{ appointment.patient.last_name }}</a></li>
+        {% endfor %}
+    </ol>
+    <p><a href="{% url 'new_appointment' %}">Umów wizytę</a></p>
+    <h2><a href="{% url 'patient_list' %}">Lista twoich pacjentów</a></h2>
+{% endblock %}

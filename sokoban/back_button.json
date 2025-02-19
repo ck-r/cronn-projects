@@ -1,0 +1,7 @@
+{
+  "type": "Button",
+  "x": 580,
+  "y": 0,
+  "text": "Back to level select",
+  "func_data": ["load_menu", 1]
+}

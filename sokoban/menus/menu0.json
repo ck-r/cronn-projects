@@ -1,0 +1,35 @@
+{
+  "label_title":
+  {
+    "type": "Label",
+    "x": 260,
+    "y": 100,
+    "text": "SOKOBAN",
+    "font_size": 80,
+    "text_color": [200, 200, 255, 255],
+    "padding": 0
+  },
+  "button_play":
+  {
+    "type": "Button",
+    "x": 300,
+    "y": 200,
+    "text": "Play",
+    "font_size": 32,
+    "padding": 16,
+    "width": 320,
+    "func_data": ["load_menu", 1]
+  },
+  "button_records":
+  {
+    "type": "Button",
+    "x": 300,
+    "y": 300,
+    "text": "Best times",
+    "font_size": 32,
+    "padding": 16,
+    "width": 320,
+    "func_data": ["load_menu", 2]
+  },
+  "unload_level": true
+}

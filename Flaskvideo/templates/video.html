@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% from 'macros/channel-link.html' import channel_link_medium, channel_link_small %}
+{% from 'macros/like-btn.html' import like_btn, like_comment_btn %}
+{% from 'macros/dislike-btn.html' import dislike_btn, dislike_comment_btn %}
+{% from 'macros/video-feed.html' import video_feed %}
+
+{% block title %}{{ video.title }}{% endblock %}
+
+{% block content %}
+    <div class="container-left">
+        <section class="video">
+            <div id="media-player">
+                <video width="100%" height="100%" style="width: 100%; height: 100%" controls="controls">
+                    <source src="{{ url_for('static', filename=video['source']) }}" type="video/mp4">
+                </video>
+            </div>
+            <h2>{{ video['title'] }}</h2>
+            <p>{{ video['view_count'] }} views</p>
+            <p>Uploaded on {{ video['upload_date'] }}</p>
+            <div class="video-actions">
+                {{ channel_link_medium(video['uploader'], subscribe_btn_pressed) }}
+                {{ like_btn(video['liked'], video) }}
+                {{ dislike_btn(video['disliked'], video) }}
+            </div>
+            <p class="video-description">
+                {{ video['description'] }}
+            </p>
+        </section>
+        <section class="comments">
+            <p>{{ comment_count }} Comments</p>
+            <span id="expand-btn"></span>
+            <div id="expandible">
+                {% for comment in comments %}
+                    <div class="comment">
+                        <div class="comment-actions">
+                            {{ channel_link_small(comment['uploader']) }}
+                            {{ like_comment_btn(comment['liked'], comment) }}
+                            {{ dislike_comment_btn(comment['disliked'], comment) }}
+                        </div>
+                        <div class="comment-content">
+                            <p>{{ comment['text'] }}</p>
+                            <small>{{ comment['upload_date'] }}</small>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+    <aside class="container-right">
+        {{ video_feed(recommendations) }}
+    </aside>
+{% endblock %}

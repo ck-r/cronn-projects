@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} Pacjent {{ patient.first_name }} {{ patient.last_name }} {% endblock %}
+
+{% block content %}
+    <h1>Pacjent {{ patient.first_name }} {{ patient.last_name }}</h1>
+    <h2>Wiek: {{ patient.age }}</h2>
+    <h3>Zamieszkaly w {{ patient.address }}</h3>
+    <p><a href="{% url 'index' %}">wróć do strony głównej</a></p>
+{% endblock %}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Noto+Sans+JP&display=swap');
+
+*{
+    font-family: 'Noto Sans JP', sans-serif;
+    color:lightgray;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0f0f0f;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    width: 100%;
+    border: 10px solid gray;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+}
+
+section{
+    width: 33.33%;
+    padding: 5px;
+}
+
+@media (max-width: 750px){
+    .content{
+        flex-direction: column;
+    }
+    
+    section{
+        width: 100%;
+    }
+}
+
+footer{
+    width: 100%;
+    border: 5px solid gray;
+    padding: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+#magenta{
+    border: 5px solid magenta;
+    background-color: #400040;
+}
+
+#cyan{
+    border: 5px solid cyan;
+    background-color: #004040;
+}
+
+#yellow{
+    border: 5px solid yellow;
+    background-color: #404000;
+}

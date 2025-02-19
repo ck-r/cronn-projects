@@ -1,0 +1,11 @@
+{% macro subscribe_btn(pressed, count) %}
+{% if pressed %}
+    <a class="subscribe-btn-pressed" href="#">
+        {{ count }} <span></span>
+    </a>
+{% else %}
+    <a class="subscribe-btn" href="#">
+        {{ count }} <span></span>
+    </a>
+{% endif %}
+{% endmacro %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} Spotkanie {{ appointment.date }} {% endblock %}
+
+{% block content %}
+    <h2>Spotkanie z {{ appointment.patient.first_name }} {{ appointment.patient.last_name }}</h2>
+    <p>Data: {{ appointment.date }}</p>
+    <p>Uwagi: {{ appointment.recommendations }}</p>
+    <p><a href="{% url 'index' %}">wróć do strony głównej</a></p>
+{% endblock %}

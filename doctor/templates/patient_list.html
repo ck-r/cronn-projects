@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} Lista Pacjentów {% endblock %}
+
+{% block content %}
+    <h2>Lista Pacjentów</h2>
+    <ol>
+        {% for patient in patients %}
+            <li><a href="{% url 'patient' patient.id %}">{{ patient.first_name }} {{ patient.last_name }}</a></li>
+        {% endfor %}
+    </ol>
+    <p><a href="{% url 'index' %}">wróć do strony głównej</a></p>
+{% endblock %}

@@ -1,0 +1,185 @@
+{
+  "label":
+  {
+    "type": "Label",
+    "x": 150,
+    "y": 100,
+    "text": "Select level",
+    "font_size": 36
+  },
+  "button_l1": {
+    "type": "Button",
+    "x": 150,
+    "y": 200,
+    "text": "1",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 1]
+  },
+  "button_l2": {
+    "type": "Button",
+    "x": 220,
+    "y": 200,
+    "text": "2",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 2]
+  },
+  "button_l3": {
+    "type": "Button",
+    "x": 290,
+    "y": 200,
+    "text": "3",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 3]
+  },
+  "button_l4": {
+    "type": "Button",
+    "x": 360,
+    "y": 200,
+    "text": "4",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 4]
+  },
+  "button_l5": {
+    "type": "Button",
+    "x": 430,
+    "y": 200,
+    "text": "5",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 5]
+  },
+  "button_l6": {
+    "type": "Button",
+    "x": 500,
+    "y": 200,
+    "text": "6",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 6]
+  },
+  "button_l7": {
+    "type": "Button",
+    "x": 150,
+    "y": 290,
+    "text": "7",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 7]
+  },
+  "button_l8": {
+    "type": "Button",
+    "x": 220,
+    "y": 290,
+    "text": "8",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 8]
+  },
+  "button_l9": {
+    "type": "Button",
+    "x": 290,
+    "y": 290,
+    "text": "9",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 9]
+  },
+  "button_l10": {
+    "type": "Button",
+    "x": 360,
+    "y": 290,
+    "text": "10",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 10]
+  },
+  "button_l11": {
+    "type": "Button",
+    "x": 430,
+    "y": 290,
+    "text": "11",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 11]
+  },
+  "button_l12": {
+    "type": "Button",
+    "x": 500,
+    "y": 290,
+    "text": "12",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 12]
+  },
+  "button_l13": {
+    "type": "Button",
+    "x": 150,
+    "y": 380,
+    "text": "13",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 13]
+  },
+  "button_l14": {
+    "type": "Button",
+    "x": 220,
+    "y": 380,
+    "text": "14",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 14]
+  },
+  "button_l15": {
+    "type": "Button",
+    "x": 290,
+    "y": 380,
+    "text": "15",
+    "font_size": 24,
+    "padding": 16,
+    "width": 50,
+    "height": 70,
+    "func_data": ["load_level", 15]
+  },
+  "button_back": {
+    "type": "Button",
+    "x": 150,
+    "y": 480,
+    "text": "Back to main menu",
+    "color_default": [200, 100, 100, 200],
+    "color_hover": [250, 100, 150, 200],
+    "func_data": ["load_menu", 0]
+  },
+  "unload_level": true
+}

@@ -1,0 +1,22 @@
+{% from 'macros/subscribe-btn.html' import subscribe_btn %}
+
+{% macro channel_link_small(channel) %}
+    <div class="channel-link-small">
+        <a href="#">
+            <img src="{{ channel['profile_picture'] }}" alt="">
+            <small>{{ channel['name'] }}</small>
+        </a>
+    </div>
+{% endmacro %}
+
+{% macro channel_link_medium(channel, subscribed) %}
+    <div class="channel-link-medium">
+        {{ subscribe_btn(subscribed, channel['subscriber_count']) }}
+        <a href="#">
+            <img src="{{ channel['profile_picture'] }}" alt="">
+            <p>{{ channel['name'] }}</p>
+            <p>{{ channel['subscriber_count'] }}</p>
+        </a>
+
+    </div>
+{% endmacro %}
